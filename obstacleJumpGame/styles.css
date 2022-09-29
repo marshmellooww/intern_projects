@@ -1,0 +1,154 @@
+
+body {
+margin: 0;
+padding: 0;
+background-color: #E8E8DD;
+}
+
+hr {
+  display: none;
+  border: dotted yellow 8px;
+  border-bottom: none;
+  width: 25%;
+  margin: 45px 0 45px 75%;
+  animation: none;
+}
+
+.hrActive {
+  animation: movingHorizon 3s infinite linear;
+}
+
+@keyframes movingHorizon {
+  100% {
+    transform: translateX(-450%);
+  }
+}
+
+.character {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  top: 250px;
+  background-color: black;
+}
+
+.game {
+  width: 100%;
+  height: 300px;
+  border: 1px solid black;
+  margin-top: 15%;
+  background-color: #D2D2D2;
+}
+
+.gameOver {
+  display: none;
+  position: absolute;
+  font-family: cursive;
+  font-size: 100px;
+  width: 100%;
+  text-align: center;
+  top: 35%;
+  color: #BF0202;
+  animation: blinker 1.5s infinite linear
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+    color: #EE2A2A;
+  }
+}
+
+.jump {
+    animation: jump 0.3s linear;
+}
+
+@keyframes jump {
+  0% {
+    top: 250px;
+  }
+
+  30% {
+    top: 130px;
+  }
+
+  50% {
+    top: 80px;
+  }
+
+  80% {
+    top: 130px;
+  }
+
+  100% {
+    top: 250px;
+  }
+}
+
+.obstacle {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 230px;
+  left: 100%;
+  background-color: #35106E;
+  animation: none;
+}
+
+.obstacleActive {
+  animation: obstacle 4s infinite linear;
+}
+
+@keyframes obstacle {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -20px;
+  }
+}
+
+.road {
+  width: 100%;
+  height: 100px;
+  background-color: grey;
+  margin: 0 auto 0 auto;
+  border: 1px solid white;
+}
+
+.score {
+  position: absolute;
+  top: 200px;
+  right: 0;
+}
+
+.startGame {
+  position: absolute;
+  font-family: cursive;
+  font-size: 60px;
+  width: 100%;
+  top: 10%;
+  text-align: center;
+  color: purple;
+}
+
+
+/* .obstacleAir {
+  position: absolute;
+  background-color: green;
+  width: 40px;
+  height: 3px;
+  top: 40%;
+  left: 100%;
+  animation: none;
+}
+
+.obstacleAirActive {
+  animation: obstacleAirMove 2s infinite linear;
+}
+
+@keyframes obstacleAirMove {
+    100% {
+      left: -40px;
+    }
+  } */
